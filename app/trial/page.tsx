@@ -65,29 +65,29 @@ export default function SignUpPage() {
     const newErrors: FormErrors = {}
 
     if (!formData.company.trim()) {
-      newErrors.company = "Company name is required"
+      newErrors.company = "Bedrijfsnaam is verplicht"
     }
 
     if (!formData.firstName.trim()) {
-      newErrors.firstName = "First name is required"
+      newErrors.firstName = "Voornaam is verplicht"
     }
 
     if (!formData.lastName.trim()) {
-      newErrors.lastName = "Last name is required"
+      newErrors.lastName = "Achternaam is verplicht"
     }
 
     if (!formData.email.trim()) {
-      newErrors.email = "Email is required"
+      newErrors.email = "E-mail is verplicht"
     } else if (!validateEmail(formData.email)) {
-      newErrors.email = "Please enter a valid email address"
+      newErrors.email = "Voer een geldig e-mailadres in"
     }
 
     if (formData.phone && !validatePhone(formData.phone)) {
-      newErrors.phone = "Please enter a valid phone number"
+      newErrors.phone = "Voer een geldig telefoonnummer in"
     }
 
     if (!formData.terms) {
-      newErrors.terms = "You must agree to the terms and conditions"
+      newErrors.terms = "U dient akkoord te gaan met de algemene voorwaarden"
     }
 
     setErrors(newErrors)
@@ -121,27 +121,27 @@ export default function SignUpPage() {
     const newErrors: FormErrors = { ...errors }
 
     if (name === "company" && !formData.company.trim()) {
-      newErrors.company = "Company name is required"
+      newErrors.company = "Bedrijfsnaam is verplicht"
     }
 
     if (name === "firstName" && !formData.firstName.trim()) {
-      newErrors.firstName = "First name is required"
+      newErrors.firstName = "Voornaam is verplicht"
     }
 
     if (name === "lastName" && !formData.lastName.trim()) {
-      newErrors.lastName = "Last name is required"
+      newErrors.lastName = "Achternaam is verplicht"
     }
 
     if (name === "email") {
       if (!formData.email.trim()) {
-        newErrors.email = "Email is required"
+        newErrors.email = "E-mail is verplicht"
       } else if (!validateEmail(formData.email)) {
-        newErrors.email = "Please enter a valid email address"
+        newErrors.email = "Voer een geldig e-mailadres in"
       }
     }
 
     if (name === "phone" && formData.phone && !validatePhone(formData.phone)) {
-      newErrors.phone = "Please enter a valid phone number"
+      newErrors.phone = "Voer een geldig telefoonnummer in"
     }
 
     setErrors(newErrors)
@@ -205,7 +205,7 @@ export default function SignUpPage() {
           </Link>
           <div className="text-sm text-gray-600">
             <Link href="/" className="text-green-600 hover:text-green-700 font-medium">
-              Back to home
+              Terug naar home
             </Link>
           </div>
         </div>
@@ -214,9 +214,9 @@ export default function SignUpPage() {
       {/* Hero Section */}
       <section className="py-12 px-4">
         <div className="container mx-auto text-center max-w-4xl">
-          <Badge className="mb-6 bg-green-100 text-green-700 border-green-200 text-sm px-4 py-2">🚀 Get Started</Badge>
+          <Badge className="mb-6 bg-green-100 text-green-700 border-green-200 text-sm px-4 py-2">🚀 Aan de slag</Badge>
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-            Sign up for information about <span className="text-green-600">AI-Powered</span> Logistics Consulting
+            Meld je aan voor informatie over AI-gedreven logistiek consulting
           </h1>
         </div>
       </section>
@@ -229,9 +229,9 @@ export default function SignUpPage() {
                 <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <User className="h-8 w-8 text-green-600" />
                 </div>
-                <CardTitle className="text-2xl font-bold">Your Information</CardTitle>
+                <CardTitle className="text-2xl font-bold">Jouw informatie</CardTitle>
                 <CardDescription className="text-lg">
-                  Fill out the form below to receive information about our services
+                  Vul onderstaand formulier in om informatie over onze services te ontvangen
                 </CardDescription>
               </CardHeader>
               <CardContent className="p-8">
@@ -245,7 +245,7 @@ export default function SignUpPage() {
                 <form className="space-y-6" onSubmit={handleSubmit} noValidate>
                   <div className="space-y-2">
                     <Label htmlFor="company" className="text-base font-medium">
-                      Company name *
+                      Bedrijfsnaam *
                     </Label>
                     <div className="relative">
                       <Building className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
@@ -255,7 +255,7 @@ export default function SignUpPage() {
                         value={formData.company}
                         onChange={handleChange}
                         onBlur={handleBlur}
-                        placeholder="Enter your company name"
+                        placeholder="Vul je bedrijfsnaam in"
                         className={`pl-12 h-12 text-base ${
                           errors.company && touched.company
                             ? "border-red-500 focus:border-red-500 focus:ring-red-500"
@@ -275,7 +275,7 @@ export default function SignUpPage() {
                   <div className="grid md:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <Label htmlFor="firstName" className="text-base font-medium">
-                        First name *
+                        Voornaam *
                       </Label>
                       <div className="relative">
                         <User className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
@@ -285,7 +285,7 @@ export default function SignUpPage() {
                           value={formData.firstName}
                           onChange={handleChange}
                           onBlur={handleBlur}
-                          placeholder="First name"
+                          placeholder="Voornaam"
                           className={`pl-12 h-12 text-base ${
                             errors.firstName && touched.firstName
                               ? "border-red-500 focus:border-red-500 focus:ring-red-500"
@@ -303,7 +303,7 @@ export default function SignUpPage() {
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="lastName" className="text-base font-medium">
-                        Last name *
+                        Achternaam *
                       </Label>
                       <Input
                         id="lastName"
@@ -311,7 +311,7 @@ export default function SignUpPage() {
                         value={formData.lastName}
                         onChange={handleChange}
                         onBlur={handleBlur}
-                        placeholder="Last name"
+                        placeholder="Achternaam"
                         className={`h-12 text-base ${
                           errors.lastName && touched.lastName
                             ? "border-red-500 focus:border-red-500 focus:ring-red-500"
@@ -330,7 +330,7 @@ export default function SignUpPage() {
 
                   <div className="space-y-2">
                     <Label htmlFor="email" className="text-base font-medium">
-                      Work email *
+                      Werk e-mail *
                     </Label>
                     <div className="relative">
                       <Mail className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
@@ -341,7 +341,7 @@ export default function SignUpPage() {
                         value={formData.email}
                         onChange={handleChange}
                         onBlur={handleBlur}
-                        placeholder="Enter your work email"
+                        placeholder="Vul je werk e-mail in"
                         className={`pl-12 h-12 text-base ${
                           errors.email && touched.email
                             ? "border-red-500 focus:border-red-500 focus:ring-red-500"
@@ -360,7 +360,7 @@ export default function SignUpPage() {
 
                   <div className="space-y-2">
                     <Label htmlFor="phone" className="text-base font-medium">
-                      Phone number
+                      Telefoonnummer
                     </Label>
                     <div className="relative">
                       <Phone className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
@@ -409,7 +409,7 @@ export default function SignUpPage() {
                       />
                       <div>
                         <Label htmlFor="terms" className="text-sm text-gray-600">
-                          I agree to the{" "}
+                          Ik ga akkoord met de{" "}
                           <Link href="/terms" className="text-green-600 hover:text-green-700 font-medium">
                             Terms of Service
                           </Link>{" "}
@@ -456,11 +456,11 @@ export default function SignUpPage() {
                             d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
                           ></path>
                         </svg>
-                        Sending...
+                        Versturen...
                       </>
                     ) : (
                       <>
-                        Send
+                        Verstuur
                         <ArrowRight className="ml-2 h-5 w-5" />
                       </>
                     )}
@@ -482,16 +482,16 @@ export default function SignUpPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
-                <CardTitle className="text-2xl font-bold">Thank You!</CardTitle>
-                <CardDescription className="text-lg">Your information has been submitted successfully</CardDescription>
+                <CardTitle className="text-2xl font-bold">Bedankt!</CardTitle>
+                <CardDescription className="text-lg">Je informatie is succesvol verzonden</CardDescription>
               </CardHeader>
               <CardContent className="p-8 text-center">
                 <p className="text-gray-600 mb-6">
-                  We've received your request for information about our AI-powered logistics consulting services. Our
-                  team will be in touch with you shortly.
+                  We hebben je verzoek ontvangen voor informatie over onze AI-gedreven logistiek consulting services.
+                  Ons team zal spoedig contact met je opnemen.
                 </p>
                 <Link href="/">
-                  <Button className="bg-green-600 hover:bg-green-700">Return to Homepage</Button>
+                  <Button className="bg-green-600 hover:bg-green-700">Terug naar homepage</Button>
                 </Link>
               </CardContent>
             </Card>

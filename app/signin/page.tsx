@@ -31,9 +31,10 @@ export default function SignInPage() {
           {/* Left Side - Visual Content */}
           <div className="space-y-8">
             <div>
-              <h1 className="text-4xl font-bold text-gray-900 mb-4">Welcome back to Nextgen</h1>
+              <h1 className="text-4xl font-bold text-gray-900 mb-4">Welkom terug bij Nextgen</h1>
               <p className="text-xl text-gray-600 leading-relaxed">
-                Continue optimizing your logistics operations with AI-powered insights and expert recommendations.
+                Ga door met het optimaliseren van je logistieke operaties met AI-gestuurde inzichten en deskundige
+                aanbevelingen.
               </p>
             </div>
 
@@ -43,9 +44,9 @@ export default function SignInPage() {
                   <CheckCircle className="h-6 w-6 text-green-600" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-900 mb-2">AI-Powered Assessments</h3>
+                  <h3 className="font-semibold text-gray-900 mb-2">AI-gestuurde beoordelingen</h3>
                   <p className="text-gray-600">
-                    Get instant logistics diagnostics and personalized recommendations for your business.
+                    Krijg direct logistieke diagnoses en persoonlijke aanbevelingen voor jouw bedrijf.
                   </p>
                 </div>
               </div>
@@ -54,9 +55,10 @@ export default function SignInPage() {
                   <Zap className="h-6 w-6 text-blue-600" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-900 mb-2">Expert Support</h3>
+                  <h3 className="font-semibold text-gray-900 mb-2">Deskundige ondersteuning</h3>
                   <p className="text-gray-600">
-                    Access human logistics specialists and join our community of Dutch SMB leaders.
+                    Krijg toegang tot menselijke logistiek specialisten en word lid van onze community van Nederlandse
+                    MKB-leiders.
                   </p>
                 </div>
               </div>
@@ -65,9 +67,9 @@ export default function SignInPage() {
                   <Shield className="h-6 w-6 text-purple-600" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-900 mb-2">Secure & Compliant</h3>
+                  <h3 className="font-semibold text-gray-900 mb-2">Veilig & Compliant</h3>
                   <p className="text-gray-600">
-                    Your data is protected with enterprise-grade security and full GDPR compliance.
+                    Jouw data is beschermd met enterprise-grade beveiliging en volledige GDPR-compliance.
                   </p>
                 </div>
               </div>
@@ -94,32 +96,32 @@ export default function SignInPage() {
           <div className="w-full max-w-md mx-auto">
             <Card className="border-0 shadow-2xl bg-white/90 backdrop-blur-sm">
               <CardHeader className="text-center pb-6">
-                <CardTitle className="text-2xl font-bold">Sign in to your account</CardTitle>
-                <CardDescription>Enter your credentials to access your dashboard</CardDescription>
+                <CardTitle className="text-2xl font-bold">Inloggen op je account</CardTitle>
+                <CardDescription>Vul je gegevens in om toegang te krijgen tot je dashboard</CardDescription>
               </CardHeader>
               <CardContent className="space-y-6">
                 <form className="space-y-4">
                   <div className="space-y-2">
-                    <Label htmlFor="email">Email address</Label>
+                    <Label htmlFor="email">Email adres</Label>
                     <div className="relative">
                       <Mail className="absolute left-3 top-3 h-4 w-4 text-gray-400" />
                       <Input
                         id="email"
                         type="email"
-                        placeholder="Enter your email"
+                        placeholder="Vul je email in"
                         className="pl-10 h-12 border-gray-200 focus:border-green-500 focus:ring-green-500"
                         required
                       />
                     </div>
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="password">Password</Label>
+                    <Label htmlFor="password">Wachtwoord</Label>
                     <div className="relative">
                       <Lock className="absolute left-3 top-3 h-4 w-4 text-gray-400" />
                       <Input
                         id="password"
                         type="password"
-                        placeholder="Enter your password"
+                        placeholder="Vul je wachtwoord in"
                         className="pl-10 pr-10 h-12 border-gray-200 focus:border-green-500 focus:ring-green-500"
                         required
                       />
@@ -132,15 +134,15 @@ export default function SignInPage() {
                     <div className="flex items-center space-x-2">
                       <Checkbox id="remember" />
                       <Label htmlFor="remember" className="text-sm text-gray-600">
-                        Remember me
+                        Onthoud mij
                       </Label>
                     </div>
                     <Link href="/forgot-password" className="text-sm text-green-600 hover:text-green-700">
-                      Forgot password?
+                      Wachtwoord vergeten?
                     </Link>
                   </div>
                   <Button className="w-full bg-green-600 hover:bg-green-700 h-12 text-base" size="lg">
-                    Sign in to Dashboard
+                    Inloggen op Dashboard
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </form>
@@ -150,7 +152,7 @@ export default function SignInPage() {
                     <div className="w-full border-t border-gray-200" />
                   </div>
                   <div className="relative flex justify-center text-sm">
-                    <span className="px-2 bg-white text-gray-500">Or continue with</span>
+                    <span className="px-2 bg-white text-gray-500">Of ga verder met</span>
                   </div>
                 </div>
 
