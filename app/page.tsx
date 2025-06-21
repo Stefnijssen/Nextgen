@@ -1,4 +1,4 @@
-import { ArrowRight, CheckCircle, Users, Zap, Target, BarChart3, Shield, Clock, Phone } from "lucide-react"
+import { ArrowRight, CheckCircle, Zap, Target, BarChart3, Shield, FileText, MessageSquare, Search } from "lucide-react"
 import Link from "next/link"
 
 import { Button } from "@/components/ui/button"
@@ -14,18 +14,18 @@ export default function LandingPage() {
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <Logo />
           <nav className="hidden md:flex items-center space-x-8">
-            <Link href="#features" className="text-gray-600 hover:text-gray-900 transition-colors">
-              Functies
+            <Link href="#wat-je-ontvangt" className="text-gray-600 hover:text-gray-900 transition-colors">
+              Wat je ontvangt
             </Link>
-            <Link href="#pricing" className="text-gray-600 hover:text-gray-900 transition-colors">
-              Prijzen
+            <Link href="#waarom-input" className="text-gray-600 hover:text-gray-900 transition-colors">
+              Waarom meedoen
             </Link>
-            <Link href="#about" className="text-gray-600 hover:text-gray-900 transition-colors">
-              Over ons
+            <Link href="#inschrijven" className="text-gray-600 hover:text-gray-900 transition-colors">
+              Inschrijven
             </Link>
-            <Link href="/trial">
-              <Button className="bg-green-600 hover:bg-green-700 ml-4">Word pilotbedrijf</Button>
-            </Link>
+            <a href="https://tally.so/r/mD9bjE" target="_blank" rel="noopener noreferrer">
+              <Button className="bg-green-600 hover:bg-green-700 ml-4">Meld je aan</Button>
+            </a>
           </nav>
         </div>
       </header>
@@ -33,322 +33,36 @@ export default function LandingPage() {
       {/* Hero Section */}
       <section className="py-20 px-4">
         <div className="container mx-auto text-center max-w-4xl">
-          <Badge className="mb-6 bg-green-50 text-green-700 border-green-200">AI-Gedreven Logistiek Consulting</Badge>
+          <Badge className="mb-6 bg-green-50 text-green-700 border-green-200">🚀 Gratis AI-Pilot</Badge>
           <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-            Transformeer je logistiek met <span className="text-green-600">AI-gedreven</span> expertise
+            Doe gratis mee aan onze <span className="text-green-600">logistieke AI-pilot</span>
           </h1>
           <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-            Krijg betaalbare, toegankelijke logistiek consulting voor Nederlandse MKB. Ons AI-platform levert expert
-            aanbevelingen voor 20-30% van traditionele consulting tarieven.
+            Ontvang vrijblijvend advies op maat en denk mee met de ontwikkeling van hét AI-platform voor e-commerce
+            logistiek. Speciaal voor Nederlandse MKB'ers.
           </p>
-          <div className="flex justify-center">
-            <Link href="/trial">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <a href="https://tally.so/r/mD9bjE" target="_blank" rel="noopener noreferrer">
               <Button size="lg" className="bg-green-600 hover:bg-green-700 text-lg px-8 py-3">
-                Help ons testen – doe mee aan ons validatiegesprek
+                Meld je aan voor een validatiegesprek
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-            </Link>
+            </a>
+            <a href="https://tally.so/r/npX5l8" target="_blank" rel="noopener noreferrer">
+              <Button size="lg" variant="outline" className="text-lg px-8 py-3">
+                Doe een Quick Scan
+                <Search className="ml-2 h-5 w-5" />
+              </Button>
+            </a>
           </div>
+          <p className="text-sm text-gray-500 mt-4">
+            ✓ Volledig gratis ✓ Geen verplichtingen ✓ Direct bruikbaar advies
+          </p>
         </div>
       </section>
 
-      {/* Target Segments */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Gebouwd voor Nederlandse MKB met logistieke uitdagingen
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Ons platform richt zich specifiek op de unieke behoeften van kleine en middelgrote bedrijven in Nederland
-              binnen belangrijke logistieke segmenten.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <Card className="border-0 shadow-sm hover:shadow-md transition-shadow">
-              <CardHeader className="pb-3">
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-3">
-                  <Users className="h-6 w-6 text-blue-600" />
-                </div>
-                <CardTitle className="text-lg">E-commerce Logistiek</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription>
-                  Optimaliseer orderafhandeling, retourenbeheer en last-mile bezorging voor kleine retailers.
-                </CardDescription>
-              </CardContent>
-            </Card>
-            <Card className="border-0 shadow-sm hover:shadow-md transition-shadow">
-              <CardHeader className="pb-3">
-                <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-3">
-                  <Zap className="h-6 w-6 text-purple-600" />
-                </div>
-                <CardTitle className="text-lg">Supply Chain Digitaal</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription>
-                  Begeleid productie MKB door digitale transformatie en systeemimplementatie.
-                </CardDescription>
-              </CardContent>
-            </Card>
-            <Card className="border-0 shadow-sm hover:shadow-md transition-shadow">
-              <CardHeader className="pb-3">
-                <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-3">
-                  <BarChart3 className="h-6 w-6 text-orange-600" />
-                </div>
-                <CardTitle className="text-lg">Voorraad Optimalisatie</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription>
-                  Balanceer werkkapitaal efficiëntie met productbeschikbaarheid voor groothandel & distributie.
-                </CardDescription>
-              </CardContent>
-            </Card>
-            <Card className="border-0 shadow-sm hover:shadow-md transition-shadow">
-              <CardHeader className="pb-3">
-                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-3">
-                  <Target className="h-6 w-6 text-green-600" />
-                </div>
-                <CardTitle className="text-lg">Duurzaamheid</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription>
-                  Implementeer praktische duurzaamheidsroadmaps voor export-gerichte MKB.
-                </CardDescription>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Core Features */}
-      <section id="features" className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Alles wat je nodig hebt om je logistiek te optimaliseren
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Ons uitgebreide platform combineert AI-gedreven inzichten met menselijke expertise om bruikbare logistieke
-              oplossingen te leveren.
-            </p>
-          </div>
-          <div className="grid lg:grid-cols-3 gap-8">
-            <div className="space-y-6">
-              <div className="flex items-start space-x-4">
-                <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <CheckCircle className="h-5 w-5 text-green-600" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-gray-900 mb-2">AI-gedreven Assessment</h3>
-                  <p className="text-gray-600">
-                    Branche-specifieke diagnostische tools die logistieke knelpunten en kansen identificeren met
-                    geautomatiseerde data-analyse.
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-4">
-                <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <Target className="h-5 w-5 text-green-600" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-gray-900 mb-2">Gepersonaliseerde Aanbevelingen</h3>
-                  <p className="text-gray-600">
-                    Maatwerk roadmaps en oplossingen afgestemd op jouw bedrijfsgrootte, branche en specifieke
-                    uitdagingen.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="space-y-6">
-              <div className="flex items-start space-x-4">
-                <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <BarChart3 className="h-5 w-5 text-green-600" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-gray-900 mb-2">Kennisbank & Bronnen</h3>
-                  <p className="text-gray-600">
-                    Uitgebreide bibliotheek van best practices, technologie reviews, case studies en
-                    implementatiegidsen.
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-4">
-                <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <Users className="h-5 w-5 text-green-600" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-gray-900 mb-2">Expert Begeleiding</h3>
-                  <p className="text-gray-600">
-                    Menselijke logistiek specialisten beoordelen AI-aanbevelingen en bieden virtuele spreekuur
-                    ondersteuning.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="space-y-6">
-              <div className="flex items-start space-x-4">
-                <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <Clock className="h-5 w-5 text-green-600" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-gray-900 mb-2">Voortgang Tracking</h3>
-                  <p className="text-gray-600">
-                    Monitor implementatie mijlpalen, volg KPI verbeteringen en ontvang continue verfijningen.
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-4">
-                <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <Shield className="h-5 w-5 text-green-600" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-gray-900 mb-2">Community & Netwerken</h3>
-                  <p className="text-gray-600">
-                    Verbind met collega's, doe mee aan expert webinars en krijg toegang tot een gecureerde partner
-                    directory.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing */}
-      <section id="pricing" className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Betaalbare plannen voor elke bedrijfsgrootte</h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Krijg expert logistiek consulting voor een fractie van traditionele consulting kosten.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <Card className="border-2 border-gray-200 hover:border-green-300 transition-colors">
-              <CardHeader className="text-center pb-8">
-                <CardTitle className="text-2xl">Starter</CardTitle>
-                <div className="mt-4">
-                  <span className="text-4xl font-bold">€49</span>
-                  <span className="text-gray-600">/maand</span>
-                </div>
-                <CardDescription className="mt-2">Perfect voor microbedrijven (1-9 medewerkers)</CardDescription>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="flex items-center space-x-3">
-                  <CheckCircle className="h-5 w-5 text-green-600" />
-                  <span>Basis assessments</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <CheckCircle className="h-5 w-5 text-green-600" />
-                  <span>Beperkte aanbevelingen</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <CheckCircle className="h-5 w-5 text-green-600" />
-                  <span>Kennisbank toegang</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <CheckCircle className="h-5 w-5 text-green-600" />
-                  <span>Community forum</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <CheckCircle className="h-5 w-5 text-green-600" />
-                  <span>Email ondersteuning</span>
-                </div>
-                <Button className="w-full mt-6" variant="outline">
-                  Word pilotbedrijf
-                </Button>
-              </CardContent>
-            </Card>
-
-            <Card className="border-2 border-green-300 relative hover:border-green-400 transition-colors">
-              <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                <Badge className="bg-green-600 text-white">Meest Populair</Badge>
-              </div>
-              <CardHeader className="text-center pb-8">
-                <CardTitle className="text-2xl">Groei</CardTitle>
-                <div className="mt-4">
-                  <span className="text-4xl font-bold">€149</span>
-                  <span className="text-gray-600">/maand</span>
-                </div>
-                <CardDescription className="mt-2">Ideaal voor kleine bedrijven (10-49 medewerkers)</CardDescription>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="flex items-center space-x-3">
-                  <CheckCircle className="h-5 w-5 text-green-600" />
-                  <span>Uitgebreide assessments</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <CheckCircle className="h-5 w-5 text-green-600" />
-                  <span>Volledige aanbevelingen</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <CheckCircle className="h-5 w-5 text-green-600" />
-                  <span>Implementatiegidsen</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <CheckCircle className="h-5 w-5 text-green-600" />
-                  <span>Beperkte expert spreekuren</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <CheckCircle className="h-5 w-5 text-green-600" />
-                  <span>Tot 3 gebruikers</span>
-                </div>
-                <Button className="w-full mt-6 bg-green-600 hover:bg-green-700">Word pilotbedrijf</Button>
-              </CardContent>
-            </Card>
-
-            <Card className="border-2 border-gray-200 hover:border-green-300 transition-colors">
-              <CardHeader className="text-center pb-8">
-                <CardTitle className="text-2xl">Schaal</CardTitle>
-                <div className="mt-4">
-                  <span className="text-4xl font-bold">€349</span>
-                  <span className="text-gray-600">/maand</span>
-                </div>
-                <CardDescription className="mt-2">
-                  Gebouwd voor middelgrote bedrijven (50-249 medewerkers)
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="flex items-center space-x-3">
-                  <CheckCircle className="h-5 w-5 text-green-600" />
-                  <span>Geavanceerde assessments</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <CheckCircle className="h-5 w-5 text-green-600" />
-                  <span>Maatwerk roadmaps</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <CheckCircle className="h-5 w-5 text-green-600" />
-                  <span>ROI calculators</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <CheckCircle className="h-5 w-5 text-green-600" />
-                  <span>Reguliere expert spreekuren</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <CheckCircle className="h-5 w-5 text-green-600" />
-                  <span>Tot 10 gebruikers</span>
-                </div>
-                <Button className="w-full mt-6" variant="outline">
-                  Word pilotbedrijf
-                </Button>
-              </CardContent>
-            </Card>
-          </div>
-          <div className="text-center mt-8">
-            <p className="text-gray-600">
-              Iets anders nodig?{" "}
-              <Link href="#" className="text-green-600 hover:underline">
-                Neem contact op voor Enterprise prijzen
-              </Link>
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* New Validation Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-50 to-green-50">
+      {/* Waarom we jouw input zoeken */}
+      <section id="waarom-input" className="py-20 bg-gradient-to-r from-blue-50 to-green-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <div className="mb-8">
@@ -357,62 +71,281 @@ export default function LandingPage() {
             </div>
 
             <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-white/20">
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-                Help ons bouwen aan hét AI-platform voor logistiek MKB
+              <h3 className="text-2xl font-semibold text-gray-900 mb-6">
+                We bouwen een slim AI-platform specifiek voor e-commerce logistiek
               </h3>
-              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                We bouwen een AI-gedreven micro-consulting platform speciaal voor bedrijven zoals dat van jou. Wil jij
-                als één van de eersten meedenken en gratis advies ontvangen?
-              </p>
 
-              <div className="grid md:grid-cols-2 gap-6 mb-8">
-                <div className="bg-green-50 rounded-lg p-6 text-left">
-                  <div className="flex items-center mb-3">
-                    <Phone className="h-5 w-5 text-green-600 mr-2" />
-                    <h4 className="font-semibold text-gray-900">30-min call met Stef</h4>
-                  </div>
-                  <p className="text-gray-600 text-sm">
-                    Persoonlijk gesprek over jouw logistieke uitdagingen en hoe ons platform kan helpen.
-                  </p>
+              <div className="grid md:grid-cols-2 gap-8 mb-8 text-left">
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-3">Het probleem dat we oplossen:</h4>
+                  <ul className="space-y-2 text-gray-600">
+                    <li className="flex items-start">
+                      <span className="text-red-500 mr-2">•</span>
+                      Logistiek advies is te duur voor het MKB
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-red-500 mr-2">•</span>
+                      Generieke oplossingen passen niet bij jouw situatie
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-red-500 mr-2">•</span>
+                      Voorraadbeheer, retourlogistiek en duurzaamheid blijven uitdagingen
+                    </li>
+                  </ul>
                 </div>
 
-                <div className="bg-blue-50 rounded-lg p-6 text-left">
-                  <div className="flex items-center mb-3">
-                    <CheckCircle className="h-5 w-5 text-blue-600 mr-2" />
-                    <h4 className="font-semibold text-gray-900">Validatievragenlijst</h4>
-                  </div>
-                  <p className="text-gray-600 text-sm">
-                    Vul onze korte vragenlijst in en ontvang direct eerste inzichten.
-                  </p>
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-3">Onze aanpak:</h4>
+                  <ul className="space-y-2 text-gray-600">
+                    <li className="flex items-start">
+                      <span className="text-green-500 mr-2">•</span>
+                      AI-gedreven micro-consulting op maat
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-green-500 mr-2">•</span>
+                      Betaalbaar voor bedrijven van 9-49 FTE
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-green-500 mr-2">•</span>
+                      Direct toepasbare adviezen binnen 24 uur
+                    </li>
+                  </ul>
                 </div>
               </div>
 
-              <Link href="/trial">
-                <Button size="lg" className="bg-green-600 hover:bg-green-700 text-lg px-12 py-3">
-                  Doe mee aan validatie
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-              </Link>
+              <div className="bg-green-50 rounded-lg p-6 mb-6">
+                <h4 className="font-semibold text-gray-900 mb-2">Waarom jouw feedback waardevol is:</h4>
+                <p className="text-gray-700">
+                  Door deel te nemen aan onze pilot help je ons het platform te verfijnen zodat het perfect aansluit bij
+                  de echte uitdagingen van Nederlandse e-commerce bedrijven. In ruil daarvoor ontvang je gratis advies
+                  en krijg je als eerste toegang tot onze tool.
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-green-600">
+      {/* Wat je ontvangt */}
+      <section id="wat-je-ontvangt" className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Wat je ontvangt als pilotdeelnemer</h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Volledig gratis en zonder verplichtingen. We investeren in jouw succes om ons platform te verbeteren.
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <Card className="border-2 border-green-200 bg-green-50/50">
+              <CardHeader className="text-center pb-6">
+                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <FileText className="h-8 w-8 text-green-600" />
+                </div>
+                <CardTitle className="text-2xl">Gratis Quick Scan (5 min)</CardTitle>
+                <CardDescription className="text-lg">Korte intake over jouw logistieke uitdagingen</CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="h-5 w-5 text-green-600" />
+                  <span>Gestructureerde vragenlijst over je logistiek</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="h-5 w-5 text-green-600" />
+                  <span>Focus op voorraadbeheer, retourlogistiek & duurzaamheid</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="h-5 w-5 text-green-600" />
+                  <span>Duurt slechts 5 minuten van je tijd</span>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-2 border-blue-200 bg-blue-50/50">
+              <CardHeader className="text-center pb-6">
+                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <BarChart3 className="h-8 w-8 text-blue-600" />
+                </div>
+                <CardTitle className="text-2xl">Persoonlijk Adviesrapport</CardTitle>
+                <CardDescription className="text-lg">Op maat gemaakt rapport binnen 24 uur</CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="h-5 w-5 text-blue-600" />
+                  <span>Analyse van jouw specifieke situatie</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="h-5 w-5 text-blue-600" />
+                  <span>3-5 concrete, toepasbare aanbevelingen</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="h-5 w-5 text-blue-600" />
+                  <span>Prioritering en implementatie-tips</span>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-2 border-purple-200 bg-purple-50/50">
+              <CardHeader className="text-center pb-6">
+                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <MessageSquare className="h-8 w-8 text-purple-600" />
+                </div>
+                <CardTitle className="text-2xl">Expert Sparring (30 min)</CardTitle>
+                <CardDescription className="text-lg">Persoonlijk gesprek met logistiek specialist</CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="h-5 w-5 text-purple-600" />
+                  <span>Doorspreken van je adviesrapport</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="h-5 w-5 text-purple-600" />
+                  <span>Beantwoorden van specifieke vragen</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="h-5 w-5 text-purple-600" />
+                  <span>Praktische implementatie-ondersteuning</span>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-2 border-orange-200 bg-orange-50/50">
+              <CardHeader className="text-center pb-6">
+                <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Zap className="h-8 w-8 text-orange-600" />
+                </div>
+                <CardTitle className="text-2xl">Pilotklant Optie</CardTitle>
+                <CardDescription className="text-lg">Meedenken en mee-ontwikkelen</CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="h-5 w-5 text-orange-600" />
+                  <span>Vroege toegang tot ons AI-platform</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="h-5 w-5 text-orange-600" />
+                  <span>Invloed op functionaliteit en features</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="h-5 w-5 text-orange-600" />
+                  <span>Speciale pilotklant voorwaarden</span>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Target Segments - aangepast voor e-commerce focus */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Perfect voor e-commerce bedrijven die worstelen met logistiek
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Herken je jezelf in één van deze uitdagingen? Dan is onze pilot perfect voor jou.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <Card className="border-0 shadow-sm hover:shadow-md transition-shadow">
+              <CardHeader className="pb-3">
+                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-3">
+                  <BarChart3 className="h-6 w-6 text-blue-600" />
+                </div>
+                <CardTitle className="text-lg">Voorraadbeheer</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription>
+                  Te veel of te weinig voorraad? Moeilijk om de juiste balans te vinden tussen kosten en
+                  beschikbaarheid?
+                </CardDescription>
+              </CardContent>
+            </Card>
+            <Card className="border-0 shadow-sm hover:shadow-md transition-shadow">
+              <CardHeader className="pb-3">
+                <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-3">
+                  <ArrowRight className="h-6 w-6 text-purple-600" />
+                </div>
+                <CardTitle className="text-lg">Retourlogistiek</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription>
+                  Retouren kosten te veel tijd en geld? Geen duidelijk proces voor het afhandelen van terugzendingen?
+                </CardDescription>
+              </CardContent>
+            </Card>
+            <Card className="border-0 shadow-sm hover:shadow-md transition-shadow">
+              <CardHeader className="pb-3">
+                <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-3">
+                  <Target className="h-6 w-6 text-orange-600" />
+                </div>
+                <CardTitle className="text-lg">Last-mile Bezorging</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription>
+                  Hoge bezorgkosten? Klanten ontevreden over levertijden? Zoek je betere bezorgoplossingen?
+                </CardDescription>
+              </CardContent>
+            </Card>
+            <Card className="border-0 shadow-sm hover:shadow-md transition-shadow">
+              <CardHeader className="pb-3">
+                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-3">
+                  <Shield className="h-6 w-6 text-green-600" />
+                </div>
+                <CardTitle className="text-lg">Duurzaamheid</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription>
+                  Wil je duurzamer worden maar weet je niet waar te beginnen? Klanten vragen om groene oplossingen?
+                </CardDescription>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Inschrijfformulier sectie */}
+      <section id="inschrijven" className="py-20 bg-green-600">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold text-white mb-4">Klaar om je logistiek te transformeren?</h2>
+          <h2 className="text-4xl font-bold text-white mb-4">Klaar om mee te doen aan onze AI-pilot?</h2>
           <p className="text-xl text-green-100 mb-8 max-w-2xl mx-auto">
-            Sluit je aan bij Nederlandse MKB bedrijven die hun logistiek al optimaliseren met AI-gedreven inzichten.
-            Start vandaag nog met je gratis assessment.
+            Meld je aan voor de gratis quick scan en ontvang binnen 24 uur je persoonlijke adviesrapport. Volledig
+            vrijblijvend en zonder kosten.
           </p>
-          <div className="flex justify-center">
-            <Link href="/trial">
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6">
+            <a href="https://tally.so/r/mD9bjE" target="_blank" rel="noopener noreferrer">
               <Button size="lg" className="bg-white text-green-600 hover:bg-gray-100 text-lg px-12 py-3">
-                Word pilotbedrijf (30 min call)
+                Meld je aan voor een validatiegesprek
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-            </Link>
+            </a>
+            <a href="https://tally.so/r/npX5l8" target="_blank" rel="noopener noreferrer">
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-white text-white hover:bg-white hover:text-green-600 text-lg px-12 py-3"
+              >
+                Doe een Quick Scan
+                <Search className="ml-2 h-5 w-5" />
+              </Button>
+            </a>
+          </div>
+
+          <div className="flex flex-wrap justify-center gap-6 text-green-100 text-sm">
+            <div className="flex items-center">
+              <CheckCircle className="h-4 w-4 mr-2" />
+              <span>5 minuten van je tijd</span>
+            </div>
+            <div className="flex items-center">
+              <CheckCircle className="h-4 w-4 mr-2" />
+              <span>Adviesrapport binnen 24u</span>
+            </div>
+            <div className="flex items-center">
+              <CheckCircle className="h-4 w-4 mr-2" />
+              <span>Geen verplichtingen</span>
+            </div>
           </div>
         </div>
       </section>
@@ -423,69 +356,36 @@ export default function LandingPage() {
           <div className="grid md:grid-cols-4 gap-8">
             <div>
               <Logo variant="white" className="mb-4" />
-              <p className="text-gray-400">AI-gedreven logistiek consulting platform voor Nederlandse MKB.</p>
+              <p className="text-gray-400">
+                AI-gedreven logistiek consulting platform voor Nederlandse e-commerce bedrijven.
+              </p>
             </div>
             <div>
-              <h4 className="font-semibold mb-4">Platform</h4>
+              <h4 className="font-semibold mb-4">Pilot Programma</h4>
               <ul className="space-y-2 text-gray-400">
                 <li>
-                  <Link href="#" className="hover:text-white transition-colors">
-                    Functies
+                  <Link href="#wat-je-ontvangt" className="hover:text-white transition-colors">
+                    Wat je ontvangt
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="hover:text-white transition-colors">
-                    Prijzen
+                  <Link href="#waarom-input" className="hover:text-white transition-colors">
+                    Waarom meedoen
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="hover:text-white transition-colors">
-                    Integraties
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-white transition-colors">
-                    API
+                  <Link href="/trial" className="hover:text-white transition-colors">
+                    Inschrijven
                   </Link>
                 </li>
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold mb-4">Bronnen</h4>
+              <h4 className="font-semibold mb-4">Ondersteuning</h4>
               <ul className="space-y-2 text-gray-400">
                 <li>
                   <Link href="#" className="hover:text-white transition-colors">
-                    Documentatie
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-white transition-colors">
-                    Case Studies
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-white transition-colors">
-                    Blog
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-white transition-colors">
-                    Ondersteuning
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">Bedrijf</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li>
-                  <Link href="#" className="hover:text-white transition-colors">
-                    Over ons
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-white transition-colors">
-                    Carrières
+                    Veelgestelde vragen
                   </Link>
                 </li>
                 <li>
@@ -500,9 +400,25 @@ export default function LandingPage() {
                 </li>
               </ul>
             </div>
+            <div>
+              <h4 className="font-semibold mb-4">Contact</h4>
+              <ul className="space-y-2 text-gray-400">
+                <li>Voor vragen over de pilot:</li>
+                <li>
+                  <a href="mailto:pilot@nextgen-logistics.nl" className="hover:text-white transition-colors">
+                    pilot@nextgen-logistics.nl
+                  </a>
+                </li>
+                <li>
+                  <a href="tel:+31612345678" className="hover:text-white transition-colors">
+                    +31 6 1234 5678
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 Nextgen. Alle rechten voorbehouden.</p>
+            <p>&copy; 2024 Nextgen. Alle rechten voorbehouden. | Pilot Programma - Gratis deelname</p>
           </div>
         </div>
       </footer>
